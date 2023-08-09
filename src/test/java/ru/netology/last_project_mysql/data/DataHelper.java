@@ -36,6 +36,7 @@ public class DataHelper {
         return faker.numerify("###");
     }
 
+
     @Value
     public static class BuyTour {
         String cardNumber;
@@ -43,6 +44,10 @@ public class DataHelper {
         String year;
         String name;
         String code;
+    }
+    @Value
+    public static class StatusCard {
+        String status;
     }
 
 }
