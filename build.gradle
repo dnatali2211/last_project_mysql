@@ -1,5 +1,15 @@
 plugins {
     id 'java'
+    id 'io.freefair.lombok' version '5.3.0'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+allure {
+    autoconfigure = true
+    version = '2.23.0'
+    useJUnit5 {
+        version = '2.23.0'
+    }
 }
 
 group = 'org.example'
@@ -13,8 +23,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    testImplementation 'mysql:mysql-connector-java:8.0.30'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'com.codeborne:selenide:6.13.0'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'io.qameta.allure:allure-selenide:2.13.3'
 }
 
 test {
